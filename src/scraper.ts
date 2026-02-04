@@ -13,7 +13,7 @@
 import { ScraperConfig, SRealityListing, SRealityRawListing, RetryConfig } from './types.js';
 import { transformListing } from './parser.js';
 import Redis from 'ioredis';
-import { createLogger } from '@shared/logger.js';
+import { createLogger } from './logger';
 
 const BASE_URL = 'https://www.sreality.cz';
 

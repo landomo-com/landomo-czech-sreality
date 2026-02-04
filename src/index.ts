@@ -4,7 +4,7 @@
 
 import { SRealityScraper } from './scraper.js';
 import { ScraperConfig } from './types.js';
-import { createLogger } from '@shared/logger.js';
+import { createLogger } from './logger';
 
 const logger = createLogger('SReality:Main');
 

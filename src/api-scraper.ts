@@ -7,7 +7,7 @@
  * Current status: May require partnership/premium access or HTML scraper fallback
  */
 
-import { ScraperLogger } from '@shared/logger.js';
+import { ScraperLogger } from './logger';
 import type { SearchOptions } from './types.js';
 
 export interface SrealityProperty {

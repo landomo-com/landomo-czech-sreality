@@ -112,3 +112,65 @@ export interface PaginationInfo {
   itemsPerPage: number;
   hasNextPage: boolean;
 }
+
+// Legacy Property interface (for compatibility with old code)
+export interface Property {
+  id: string;
+  title: string;
+  price: number;
+  currency: string;
+  propertyType: string;
+  transactionType: string;
+  source?: string;
+  location: {
+    address?: string;
+    city: string;
+    region?: string;
+    postcode?: string;
+    country: string;
+    coordinates?: { lat: number; lon: number };
+  };
+  details?: {
+    sqm?: number;
+    rooms?: number;
+    bedrooms?: number;
+    bathrooms?: number;
+    floor?: number;
+    totalFloors?: number;
+    constructionYear?: number;
+    availableFrom?: string;
+    description?: string;
+  };
+  features: string[];
+  amenities?: any;
+  agent?: {
+    name?: string;
+    agency?: string;
+    phone?: string;
+    email?: string;
+    isPrivate?: boolean;
+  };
+  metadata?: any;
+  images?: string[];
+  description?: string;
+  url: string;
+  scrapedAt?: string;
+}
+
+export interface ScraperResult {
+  properties: Property[];
+  totalFound: number;
+  pagesScraped: number;
+  errors: string[];
+}
+
+export interface SearchOptions {
+  city?: string;
+  listingType?: 'buy' | 'rent';
+  propertyType?: 'apartment' | 'house' | 'land' | 'commercial';
+  maxPages?: number;
+  headless?: boolean;
+  rateLimit?: number;
+  timeout?: number;
+  retryAttempts?: number;
+}
