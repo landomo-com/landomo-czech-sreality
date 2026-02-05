@@ -1,5 +1,41 @@
 # Changelog - Czech Sreality Scraper
 
+## [1.1.0] - 2026-02-05
+
+### Migration from Old Folder
+
+Migrated Czech Republic - Sreality scraper from `/old/czech/sreality/` to Phase 2 architecture.
+
+#### Added
+
+**Documentation:**
+- `INVESTIGATION-REPORT.md` - Complete API investigation and analysis
+- `QUICK-SUMMARY.md` - Quick reference for Sreality API
+- `docs/API.md` - Comprehensive API documentation (reverse-engineered from Android app)
+- `docs/ENDPOINTS.md` - API endpoint reference
+- `docs/CODES.md` - Region and category codes
+- `docs/EXAMPLES.md` - API response examples
+
+**Status:**
+- ⚠️ **NEEDS API REFACTORING** - Current scraper uses HTML parsing instead of JSON API
+- Phase 2 architecture infrastructure ready
+- Transformer with Czech-specific fields ready
+- Estimated 4-6 hours of refactoring needed to use JSON API
+
+**Key Information:**
+- API: `www.sreality.cz/api/cs/v2/estates`
+- 100,000+ properties available
+- No authentication required
+- HAL+JSON format
+- 15+ fields per property
+- GPS coordinates included
+
+#### Notes
+
+See [INVESTIGATION-REPORT.md](INVESTIGATION-REPORT.md) for complete migration strategy and API details.
+
+---
+
 ## [1.0.0] - 2026-02-04
 
 ### Phase 2 Architecture - COMPLETE IMPLEMENTATION
